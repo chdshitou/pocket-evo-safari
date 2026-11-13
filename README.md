@@ -86,11 +86,11 @@ Pocket Evo Safari 是 macOS Safari 扩展，为PT站点提供统一的接入、�
 ## 从源码构建
 
 1. 下载或克隆本项目。
-2. 用 Xcode 打开 `Pocket Evo 站点导入/Pocket Evo 站点导入.xcodeproj`。
-3. 选择 `Pocket Evo 站点导入` Scheme。
-4. 在 App 和 Extension 两个 Target 的 **Signing & Capabilities** 中选择自己的 Apple 开发团队，并启用自动签名。
-5. 选择本机作为运行目标，点击 **Run**。
-6. 首次启动后，在 Safari 的 **设置 → 扩展** 中启用 Pocket Evo。
+2. 安装 Xcode 命令行工具与 Node.js 22 或更高版本。
+3. 在项目根目录运行 `node scripts/build-safari.mjs`。脚本会先把两个扩展清单和 Xcode 的 App / Extension 版本同步到 `VERSION`，再构建并核验产物版本。
+4. 首次启动后，在 Safari 的 **设置 → 扩展** 中启用 Pocket Evo。
+
+更新版本时只修改根目录 `VERSION`，再运行 `node scripts/sync-version.mjs`；GitHub Actions 会检查版本一致性。请使用项目构建脚本，避免手动构建绕过同步与核验。
 
 项目不包含开发者的签名身份。使用者需在自己的 Xcode 中配置签名；直接下载源码不会自动安装 Safari 扩展。
 
