@@ -2,7 +2,7 @@
 
 Pocket Evo Safari 是 macOS Safari 扩展，为PT站点提供统一的接入、管理、搜索。用户可以集中管理站点、查看状态与统计信息，进行资源聚合搜索，一键推送下载。配置也可以生成二维码，导入 Pocket Evo App。
 
-当前项目版本：**v1.0.1**。版本号以仓库根目录的 `VERSION` 为准，Safari app、扩展 manifest 和 GitHub 发布版本保持一致。
+当前项目版本：**v1.0.4**。版本号以仓库根目录的 `VERSION` 为准，Safari app、扩展 manifest 和 GitHub 发布版本保持一致。
 
 ## 功能
 
